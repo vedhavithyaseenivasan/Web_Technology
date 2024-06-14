@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color:lightgreen;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 60px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+    }
+    input[type="text"],
+    select,
+    input[type="radio"] {
+        width: calc(100% - 22px); /* Adjusted width to account for padding and border */
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        color: #333;
+    }
+    input[type="text"]::placeholder {
+        color: #999; /* Light gray placeholder text color */
+    }
+    input[type="submit"] {
+        background-color: #4caf50; /* Green button background */
+        color: white; /* White text color */
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        font-weight: bold; /* Bold text */
+        transition: background-color 0.3s; /* Smooth transition for hover effect */
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049; /* Darker green on hover */
+    }
+    input[type="text"]:focus,
+    select:focus,
+    input[type="radio"]:focus {
+        outline: none;
+        border-color: #66afe9; /* Light blue border color */
+        box-shadow: 0 0 5px #66afe9; /* Light blue shadow */
+    }
+    .error-message {
+        color: #ff0000; /* Red text color */
+        font-size: 0.8em; /* Smaller font size */
+    }
+    label[for="male"],
+    label[for="female"] {
+        margin-right: 10px; /* Add some spacing between radio buttons and labels */
+    }
+    select {
+        appearance: none; /* Remove default arrow */
+        background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M7 10l5 5 5-5H7z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /* Custom arrow */
+        background-repeat: no-repeat; /* Prevent arrow from repeating */
+        background-position: right 8px center; /* Position arrow on the right side with some padding */
+        padding-right: 25px; /* Adjust padding to make space for arrow */
+    }
+    select:focus {
+        outline: none; /* Remove focus outline */
+        border-color: #66afe9; /* Light blue border color */
+        box-shadow: 0 0 5px #66afe9; /* Light blue shadow */
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Login</h2>
+    <form action="http://localhost:7050/login" method="post">
+        <label for="username">Employee Name</label>
+        <input type="text" id="username" name="username" placeholder="Enter your name">
+
+        <label for="id">Employee ID</label>
+        <input type="text" id="id" name="id" placeholder="Enter your ID">
+
+        <label for="branch">Branch</label>
+        <select id="branch" name="branch">
+            <option value="select">Select Branch</option>
+            <option value="HQ">Headquarters</option>
+            <option value="development">Development</option>
+            <option value="QA">Quality Assurance</option>
+            <option value="support">Customer Support</option>
+            <option value="sales">Sales</option>
+        </select>
+     
+       <label for="gender">Gender</label><br>
+       <label for="male">Male</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" value="female">
+               <br><br>
+        <label for="phno">Mobile No</label>
+        <input type="text" id="phno" name="phno" placeholder="Enter your mobile number">
+
+        <label for="branchadd">Branch Address</label>
+        <input type="text" id="branchadd" name="branchadd" placeholder="Enter branch address">
+
+        <input type="submit" value="Login">
+    </form>
+</div>
+
+</body>
+</html>

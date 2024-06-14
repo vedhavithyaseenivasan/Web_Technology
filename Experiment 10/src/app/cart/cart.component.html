@@ -1,0 +1,9 @@
+<!-- src/app/cart/cart.component.html -->
+<div *ngIf="items.length === 0"><p style="font-size:x-large;">&nbsp;&nbsp;&nbsp;Your cart is empty</p></div>
+<div *ngFor="let item of items">
+  <h2>&nbsp;&nbsp;&nbsp;{{ item.name }}</h2>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rs.{{ item.price }}</p>
+</div>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button (click)="clearCart()">Clear Cart</button></p>
+
+

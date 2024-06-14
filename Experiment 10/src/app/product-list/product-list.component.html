@@ -1,0 +1,88 @@
+<div class="head">
+<h1 style="font-family:'Times New Roman';">HOME APPLIANCES</h1>
+</div>
+<!-- src/app/product-list/product-list.component.html -->
+<div class="product-list">
+  <div class="product-card">
+    <img src="./assets/image/wm.jpg" alt="Product 1" class="product-image" />
+    <br>
+    <h2>Washing Machine</h2>
+    <p>Washing machine comprises a barrel or a drum, an inlet hose pipe along with a valve, a drain pipe, a water filter a circuit board, and a timer. </p>
+    <p>Rs.15,000</p>
+    <button (click)="addToCart({id: 1, name: 'Washing Machine', price:15000, description: 'Description for Product 1', imageUrl: 'assets/images/headset.webp'})">Add to Cart</button>
+  </div>
+  <div class="product-card">
+    <img src="./assets/image/wh.jpg" alt="Product 9" class="product-image" />
+    <h2>Water Heater</h2>
+    <p>Water heaters are often installed in the basement/cellar of a building. They heat water for use in kitchen sinks, bathroom showers.</p>
+    <p>Rs.15,000</p>
+    <button (click)="addToCart({id: 9, name: 'Water Heater', price: 15000, description: 'Description for Product 9', imageUrl: 'https://via.placeholder.com/150'})">Add to Cart</button>
+  </div>
+  <div class="product-card">
+    <img src="./assets/image/tv.jpg" alt="Product 5" class="product-image" />
+    <br>
+    <h2>LED TV</h2>
+    <p> LED stands for Light Emitting Diodes. One of the differences that separates it from LCD TVs is that LCD TVs use fluorescent lights, while LEDs make use of diodes.</p>
+    <p>Rs.15,000</p>
+    <button (click)="addToCart({id: 5, name: 'LED TV', price: 15000, description: 'Description for Product 5', imageUrl: 'https://via.placeholder.com/150'})">Add to Cart</button>
+  </div>
+  <div class="product-card">
+    <img src="./assets/image/mo.jpg" alt="Product 4" class="product-image" />
+    <br><br>
+    <h2>Microwave Oven</h2>
+    <p>A microwave oven or simply microwave is an electric oven that heats and cooks food by exposing it to electromagnetic radiation in the microwave frequency range.</p>
+    <p>Rs.9,000</p>
+    <button (click)="addToCart({id: 4, name: 'Microwave Oven', price: 9000, description: 'Description for Product 4', imageUrl: 'https://s.alicdn.com/@sc04/kf/Hd521db5e65a74fbd90100ff61e1c5f840.jpg_720x720q50.jpg'})">Add to Cart</button>
+  </div>
+  
+  <div class="product-card">
+    <br>
+    <img src="./assets/image/ref.jpg" alt="Product 3" class="product-image" />
+    <br><br>
+    <h2>Refrigerator</h2>
+    <p>Refrigerators work by causing the refrigerant circulating inside them to change from a liquid into a gas.</p>
+    <p>Rs.30,000</p>
+    <button (click)="addToCart({id: 3, name: 'Refrigerator', price: 30000, description: 'Description for Product 3', imageUrl: 'https://digital-devices.weebly.com/uploads/2/7/1/1/27118291/8780046_orig.jpg'})">Add to Cart</button>
+  </div>
+  <div class="product-card">
+    <img src="./assets/image/dw.png" alt="Product 6" class="product-image" />
+    <h2>Dish Washer</h2>
+    <p>Dishwashers work in kitchens at restaurant to clean and sanitize dishes so that Cooks and Servers have the supplies they need to prepare food and serve it to customers. </p>
+    <p>Rs.20,000</p>
+    <button (click)="addToCart({id: 6, name: 'Dish Washer', price: 20000, description: 'Description for Product 6', imageUrl: 'https://via.placeholder.com/150'})">Add to Cart</button>
+  </div>
+  <div class="product-card">
+    <img src="./assets/image/vc.jpg" alt="Product 7" class="product-image" />
+    <h2>Vaccum Cleaner</h2>
+    <p>Vacuum Cleaners are apparatus that remove and clean many kinds of surfaces by means of sucking and removing dust and small particles, and it is powered by electricity.</p>
+    <p>Rs.5,000</p>
+    <button (click)="addToCart({id: 7, name: 'Vacuum Cleaner', price: 5000, description: 'Description for Product 7', imageUrl: 'https://via.placeholder.com/150'})">Add to Cart</button>
+  </div>
+  <div class="product-card">
+    <br><br><br>
+    <img src="./assets/image/in.jpg" alt="Product 8" class="product-image" />
+    <br><br>
+    <h2>Inverter</h2>
+    <p>Inverters are also called AC Drives, or VFD (variable frequency drive). They are electronic devices that can turn DC (Direct Current) to AC (Alternating Current). </p>
+    <p>Rs.25,000</p>
+    <button (click)="addToCart({id: 8, name: 'Inverter', price: 25000, description: 'Description for Product 8', imageUrl: 'https://via.placeholder.com/150'})">Add to Cart</button>
+  </div>
+  
+  <div class="product-card">
+    <img src="./assets/image/wp.jpg" alt="Product 10" class="product-image" />
+    <h2>Water Purifier</h2>
+    <p>A water purifier treats water using one or more purification methods to make it safe.</p>
+    <p>Rs.10,000</p>
+    <button (click)="addToCart({id: 10, name: 'Water Purifier', price: 10000, description: 'Description for Product 10', imageUrl: 'https://via.placeholder.com/150'})">Add to Cart</button>
+  </div>
+  <div class="product-card">
+    <br>
+    <img src="./assets/image/ac.jpg" alt="Product 2" class="product-image" />
+    <br><br>
+    <h2>Air Conditioner</h2>
+    <p>An air conditioner cools your home with a cold indoor coil called the evaporator. The condenser, a hot outdoor coil, releases the collected heat outside.</p>
+    <p>Rs.40,000</p>
+    <button (click)="addToCart({id: 2, name: 'Air Conditioner', price:40000, description: 'Description for Product 2', imageUrl: 'https://m.media-amazon.com/images/I/61ERDR3tATL._AC_UF1000,1000_QL80_.jpg'})">Add to Cart</button>
+  </div>
+
+</div>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Home Appliances Store</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      padding: 20px;
+      background-image:url("b10.png");
+     background-size:cover;
+    }
+    form {
+      max-width: 400px;
+      margin: auto;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Sathya Home Appliances</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="h.html">Home</a>
+                </li>
+               <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+           <li class="nav-item">
+                <a class="nav-link" href="product.html">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="service.html">Services</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+  <div class="container">
+    <h1 class="text-center">Contact Us</h1>
+    <form id="submitForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea class="form-control" id="message" rows="5" placeholder="Enter your message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    
+    <div id="confirmationMessage" class="text-center hidden">
+<br><br><br><br><br><br>
+      <h2 style="font-family:algerian;"><b>Thank You!</b></h2>
+      <p>Your message has been successfully submitted.</p>
+<br><br><br><br><br><br><br>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script>
+    document.getElementById('submitForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting normally
+      
+      // Hide the form and display the confirmation message
+      document.getElementById('submitForm').classList.add('hidden');
+      document.getElementById('confirmationMessage').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
