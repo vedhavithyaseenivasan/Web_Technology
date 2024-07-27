@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <style>
+      /* src/app/product-list/product-list.component.css */
+    .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  .head{
+    text-align: center;
+  }
+  .product-card {
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 15px;
+    width:50% ;/* Adjust to display 5 products per row */
+    box-sizing: border-box;
+    text-align: center;
+    margin: 20px; /* Add margin for spacing */
+  }
+  .product-card:hover{
+    background-color:white;
+  }
+  body{
+    background-image: url('tai.jpg');
+    background-size: cover;
+
+  }
+
+  </style>
+  </head>
+  <body>
+    <div class="head"><br>
+      <h1 style="font-family:'algerian';">Travel and Adventure</h1>
+      </div>
+      <!-- src/app/product-list/product-list.component.html -->
+      <div class="product-list">
+        <br><br>
+        <div class="product-card">
+          <h3><b>Author Name:</b> Vedhavithya</h3>
+          <h3><b>Title:</b> Travel and Adventure</h3>
+          <h3>Date:</h3>May 10, 2023
+          <h4>Discovering the Hidden Gems of Southeast Asia</h4>
+          <p>The Enigmatic Temples of Bagan, Myanmar-Travel Tips:
+
+            Best Time to Visit: November to February
+            Don't Miss: Ananda Temple, Shwesandaw Pagoda
+            Insider Tip: Hire an e-bike to explore the temples at your own pace.
+            </p>
+        </div>
+        <div class="product-card">
+          <h3><b>Author Name:</b> Raj Kumar</h3>
+          <h3><b>Title:</b> Travel and Adventure</h3>
+          <h3>Date:</h3>May 7, 2023
+          <h4>Discovering the Hidden Gems of Southeast Asia</h4>
+          <p>The Lush Rice Terraces of Ubud, Bali-Travel Tips:
+
+            Best Time to Visit: April to October
+            Don't Miss: Tegallalang Rice Terraces, Ubud Monkey Forest, Campuhan Ridge Walk
+            Insider Tip: Visit early in the morning to avoid crowds and enjoy the tranquility.
+            </p>
+            </div>
+      </div>
+      
+  </body>
+</html>
