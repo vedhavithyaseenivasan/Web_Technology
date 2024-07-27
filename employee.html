@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image:url('Frm.jpg');
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            background-color:white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 30px auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        select {
+            width: calc(100% - 22px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        body button{
+            background-color: lightcyan;
+        }
+        body button:hover{
+            background-color:lightpink;
+        }
+    </style>
+</head>
+<body>
+    <h1><center>BLOG DETAILS</center></h1>
+    <form id="form" method="get">
+        <label for="name">Author Name: </label>
+        <input type="text" id="name" name="name" value=""><br><br>
+        <label for="tit">Blog Title: </label>
+        <select id="tit" name="tit">
+            <option value="select">Select any one</option>
+            <option value="Technology and Gadget">Technology and Gadget</option>
+            <option value="Travel and Adventure">Travel and Adventure</option>
+            <option value="Personal Development">Personal Development</option>
+            <option value="Fashion and Beauty">Fashion and Beauty</option>
+            <option value="Education and Learning">Education and Learning</option>
+            <option value="Finance and Investing">Finance and Investing</option>
+            <option value="Health and Wellness">Health and Wellness</option>
+            <option value="Food and Cooking">Food and Cooking</option>
+            <option value="Science and Innovation">Science and Innovation</option>
+            <option value="Sports and Fitness">Sports and Fitness</option>
+        </select><br><br>
+        <label for="dob">Date: </label>
+        <input type="date" id="dob" name="dob" required>
+        <br><br>
+        <label for="msge">Blog Content: </label>
+        <textarea id="msge" name="msge" rows="4" style="width: 100%;" placeholder="Enter the Content" required></textarea>
+       <br><br><br>
+        <button type="submit" onclick="set('/insert', event)">Insert</button>
+        <button type="submit" onclick="set('/delete', event)">Delete</button>
+        <button type="submit" onclick="set('/update', event)">Update</button>
+        <button type="submit" onclick="set('/display', event)">View</button>
+        <a href="home.html" class="btn">BACK</a>
+
+    </form>
+
+    <script>
+        function set(path, event) {
+            event.preventDefault(); // Prevent default form submission behavior
+            document.getElementById('form').action = 'http://localhost:7050' + path;
+            document.getElementById('form').submit(); // Submit the form after setting the action
+        
+        }
+    </script>
+</body>
+</html>
