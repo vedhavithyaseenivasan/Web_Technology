@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(43, 32, 32);
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: white;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: grey;
+            color: black;
+        }
+        .content {
+            padding: 20px;
+        }
+        .home-button {
+            background-color: white;
+            color: black;
+            padding: 10px 15px;
+            border: 2px solid grey;
+            cursor: pointer;
+            font-family: 'forte';
+        }
+        .home-button:hover {
+            background-color: lightcyan;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+        }
+        .blog {
+            border: 3px solid #ccc;
+            border-radius: 15px;
+            padding: 15px;
+            width: calc(20% - 32px); /* Adjust to display 5 products per row */
+            box-sizing: border-box;
+            text-align: center;
+            margin: 20px; /* Add margin for spacing */
+            color: white;
+            font-family: 'forte';
+        }
+        .blog a {
+            display: inline-block;
+            padding: 3px 7px;
+            font-size: 1em;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 8px;
+            background-color:white;
+        }
+        .blog a:hover {
+            background-color: lightgreen;
+        }
+        .bttn {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="container">
+        <div class="blog" style="background-image:url('tg1.webp');">
+            <h2>Technology and Gadgets</h2>
+            <a href="tg.html" class="button">Read More</a>
+        </div>
+        <div class="blog" style="background-image:url('ta1.jpg'); background-size: cover;">
+            <h2>Travel and Adventure</h2>
+            <a href="ta.html" class="button">Read More</a>
+        </div>
+        <div class="blog" style="background-image:url('pd.jpg'); background-size: cover;">
+            <h2>Personal Development</h2>
+            <a href="pd.html" class="button">Read More</a>
+        </div>
+        <div class="blog" style="background-image:url('fb.jpg'); background-size: cover;">
+            <h2>Fashion and Beauty</h2>
+            <a href="fb.html" class="button">Read More</a>
+        </div>
+        <div class="blog" style="background-image:url('el.jpg'); background-size: cover;">
+            <h2>Education and Learning</h2>
+            <a href="el.html" class="button">Read More</a>
+        </div>
+        <div class="blog" style="background-image:url('fi.avif'); background-size: cover;">
+            <h2>Finance and Investing</h2>
+            <a href="fi.html" class="button">Read More</a>
+        </div>
+        <div class="blog" style="background-image:url('hw.jpg'); background-size: cover;">
+            <h2>Health and Wellness</h2>
+            <a href="hw.html" class="button">Read More</a>
+        </div>
+        <div class="blog" style="background-image:url('fc.webp');">
+            <h2>Food and Cooking</h2>
+            <a href="fc.html" class="button">Read More</a>
+        </div>
+        <div class="blog" style="background-image:url('si.jpg'); background-size: cover;">
+            <h2>Science and Innovation</h2>
+            <a href="si.html" class="button">Read More</a>
+        </div>
+        <div class="blog" style="background-image:url('sf.webp'); background-size: cover;">
+            <h2>Sports and Fitness</h2>
+            <a href="sf.html" class="button">Read More</a>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="bttn">
+        <button class="home-button" onclick="window.location.href='employee.html'">Create, Delete or Update Your Own Blog</button>
+    </div>
+    <br><br><br>
+    <script>
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelectorAll('.content').forEach(section => section.style.display = 'none');
+                document.querySelector(link.getAttribute('href')).style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
